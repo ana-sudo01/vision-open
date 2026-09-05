@@ -1,0 +1,26 @@
+#Compilación y binarios
+build/
+bin/
+lib/
+*.o
+*.obj
+*.exe
+*.out
+
+#Temporales de CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+#Entornos y editores
+.vscode/
+.idea/
+*.swp
+*.code-workspace
+
+#Datos locales pesados de prueba
+data/images/*
+data/videos/*
+!data/images/.gitkeep
+!data/videos/.gitkeep
