@@ -1,20 +1,14 @@
 #pragma once
 
-#include <iostream>
+#include "esp_camera.h"
 
 class CameraCapture{
-    public:
+public:
     CameraCapture();
     bool init();
+    camera_fb_t* captureFrame();
+    void releaseFrame(camera_fb_t*);
 
-    struct FrameBuffer{
-        const char* buf;
-        int len;
-    };
-
-    FrameBuffer* captureFrame();
-    void releaseFrame(FrameBuffer* fb);
-
-
+private:
+    camera_config_t config;
 };
-
